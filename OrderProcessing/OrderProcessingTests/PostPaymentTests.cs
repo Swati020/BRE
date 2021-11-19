@@ -23,8 +23,15 @@ namespace OrderProcessing.Tests
                 ProductDetail = new Product { Catagories = ProductCatagories.Books, Quantity = 2, UnitPrice = 50 },
                 AgentDetail = new Agent { AgentId = 1 }
             };
+            Order order3 = new Order()
+            {
+                CustomerDetail = new Customer { EmailId = "abc@gmail.com", Name = "TestName" },
+                ProductDetail = new Product { Catagories = ProductCatagories.Membership, Quantity = 2, UnitPrice = 50 },
+                AgentDetail = new Agent { AgentId = 1 }
+            };
             processedOrderList.Add(order1);
-            processedOrderList.Add(order1);
+            processedOrderList.Add(order2);
+            processedOrderList.Add(order3);
             PostPayment postPayment = new PostPayment();
             foreach (var order in processedOrderList)
             {
