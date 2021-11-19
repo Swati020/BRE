@@ -13,10 +13,10 @@ namespace OrderProcessing
             _rules.Add(new PhysicalProductRule());
             _rules.Add(new BookProductRule());
             _rules.Add(new MembershipProductRule());
-            _rules.Add(new UpgradeProductRule());      
-            _rules.Add(new EmailRequiredRule());      
-            _rules.Add(new LearnigSKIRule());      
-            _rules.Add(new CommisionRule());      
+            _rules.Add(new UpgradeProductRule());
+            _rules.Add(new EmailRequiredRule());
+            _rules.Add(new LearnigSKIRule());
+            _rules.Add(new CommisionRule());
 
         }
         public bool PostPaymentProcessing(Order order)

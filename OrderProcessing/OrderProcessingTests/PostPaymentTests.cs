@@ -31,7 +31,7 @@ namespace OrderProcessing.Tests
             };
             Order order4 = new Order()
             {
-                CustomerDetail = new Customer { EmailId = "abc@gmail.com", Name = "TestName", Active=true, Upgraded=false },
+                CustomerDetail = new Customer { EmailId = "abc@gmail.com", Name = "TestName", Active = true, Upgraded = false },
                 ProductDetail = new Product { Catagories = ProductCatagories.UpgradedMemberShip, Quantity = 2, UnitPrice = 50 },
                 AgentDetail = new Agent { AgentId = 1 }
             };

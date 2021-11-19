@@ -1,6 +1,5 @@
 ﻿using OrderProcessing.Common;
 using OrderProcessing.Interfaces;
-using System;
 
 namespace OrderProcessing.Rules
 {
@@ -8,7 +7,7 @@ namespace OrderProcessing.Rules
     {
         public bool ProcessingBizRules(Order order)
         {
-            var IsSuccess= order.IsLearningSkiVideo() && order.GenratePaymentSlip();
+            var IsSuccess = order.IsLearningSkiVideo() && order.GenratePaymentSlip();
             return IsSuccess;
         }
     }

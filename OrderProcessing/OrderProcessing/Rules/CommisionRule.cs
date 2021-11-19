@@ -1,6 +1,5 @@
 ﻿using OrderProcessing.Common;
 using OrderProcessing.Interfaces;
-using System;
 namespace OrderProcessing.Rules
 {
     public class CommisionRule : IPostPaymentRule
