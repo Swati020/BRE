@@ -4,10 +4,10 @@ using OrderProcessing.Common;
 namespace OrderProcessing.Rules.Tests
 {
     [TestClass()]
-    public class LearnigSKIRuleTests
+    public class CommisionRuleTests
     {
         [TestMethod()]
-        public void ProcessingBizRulesFailTest()
+        public void ProcessingBizRulesTest()
         {
             Order order = new Order()
             {
@@ -15,22 +15,20 @@ namespace OrderProcessing.Rules.Tests
                 ProductDetail = new Product { Catagories = ProductCatagories.Physical, Quantity = 12, UnitPrice = 50 },
                 AgentDetail = new Agent { AgentId = 1 }
             };
-            LearnigSKIRule learnigSKIRule = new LearnigSKIRule();
-            Assert.AreNotEqual(order.IsLearningSkiVideo(), order.GenratePaymentSlip());
-            Assert.IsFalse(learnigSKIRule.ProcessingBizRules(order));
+            CommisionRule commisionRule = new CommisionRule();
+            Assert.IsTrue(commisionRule.ProcessingBizRules(order));
         }
         [TestMethod()]
-        public void ProcessingBizRulesSuccessTest()
+        public void ProcessingBizRulesFailedTest()
         {
             Order order = new Order()
             {
                 CustomerDetail = new Customer { EmailId = "abc@gmail.com", Name = "TestName" },
-                ProductDetail = new Product { Catagories = ProductCatagories.SkiLearningvideos, Quantity = 1, UnitPrice = 20 },
+                ProductDetail = new Product { Catagories = ProductCatagories.SkiLearningvideos, Quantity = 1, UnitPrice = 150 },
                 AgentDetail = new Agent { AgentId = 1 }
             };
-            LearnigSKIRule learnigSKIRule = new LearnigSKIRule();
-            Assert.AreEqual(order.IsLearningSkiVideo(), order.GenratePaymentSlip());
-            Assert.IsTrue(learnigSKIRule.ProcessingBizRules(order));
+            CommisionRule commisionRule = new CommisionRule();
+            Assert.IsFalse(commisionRule.ProcessingBizRules(order));
         }
     }
 }

@@ -7,6 +7,18 @@ namespace OrderProcessing.Rules.Tests
     public class EmailRequiredRuleTests
     {
         [TestMethod()]
+        public void ProcessingBizRulesTest()
+        {
+            Order order = new Order()
+            {
+                CustomerDetail = new Customer { EmailId = "abc@gmail.com", Name = "TestName" },
+                ProductDetail = new Product { Catagories = ProductCatagories.Membership, Quantity = 2, UnitPrice = 50 },
+                AgentDetail = new Agent { AgentId = 1 }
+            };
+            MembershipProductRule membershipProductRule = new MembershipProductRule();
+            Assert.IsTrue(membershipProductRule.ProcessingBizRules(order));
+        }
+        [TestMethod()]
         public void ProcessingBizRulesFailTest()
         {
             Order order = new Order()
@@ -16,6 +28,8 @@ namespace OrderProcessing.Rules.Tests
                 AgentDetail = new Agent { AgentId = 1 }
             };
             Assert.AreNotEqual(order.EmailRequired(), order.SendEmail());
+            MembershipProductRule membershipProductRule = new MembershipProductRule();
+            Assert.IsFalse(membershipProductRule.ProcessingBizRules(order));
         }
         [TestMethod()]
         public void ProcessingBizRulesSuccessTest()
