@@ -1,0 +1,14 @@
+C:\Users\swati\source\repos\BRE\OrderProcessing\OrderProcessing\bin\Debug\netcoreapp3.1\OrderProcessing.exe
+C:\Users\swati\source\repos\BRE\OrderProcessing\OrderProcessing\bin\Debug\netcoreapp3.1\OrderProcessing.deps.json
+C:\Users\swati\source\repos\BRE\OrderProcessing\OrderProcessing\bin\Debug\netcoreapp3.1\OrderProcessing.runtimeconfig.json
+C:\Users\swati\source\repos\BRE\OrderProcessing\OrderProcessing\bin\Debug\netcoreapp3.1\OrderProcessing.runtimeconfig.dev.json
+C:\Users\swati\source\repos\BRE\OrderProcessing\OrderProcessing\bin\Debug\netcoreapp3.1\OrderProcessing.dll
+C:\Users\swati\source\repos\BRE\OrderProcessing\OrderProcessing\bin\Debug\netcoreapp3.1\OrderProcessing.pdb
+C:\Users\swati\source\repos\BRE\OrderProcessing\OrderProcessing\obj\Debug\netcoreapp3.1\OrderProcessing.csproj.AssemblyReference.cache
+C:\Users\swati\source\repos\BRE\OrderProcessing\OrderProcessing\obj\Debug\netcoreapp3.1\OrderProcessing.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\swati\source\repos\BRE\OrderProcessing\OrderProcessing\obj\Debug\netcoreapp3.1\OrderProcessing.AssemblyInfoInputs.cache
+C:\Users\swati\source\repos\BRE\OrderProcessing\OrderProcessing\obj\Debug\netcoreapp3.1\OrderProcessing.AssemblyInfo.cs
+C:\Users\swati\source\repos\BRE\OrderProcessing\OrderProcessing\obj\Debug\netcoreapp3.1\OrderProcessing.csproj.CoreCompileInputs.cache
+C:\Users\swati\source\repos\BRE\OrderProcessing\OrderProcessing\obj\Debug\netcoreapp3.1\OrderProcessing.dll
+C:\Users\swati\source\repos\BRE\OrderProcessing\OrderProcessing\obj\Debug\netcoreapp3.1\OrderProcessing.pdb
+C:\Users\swati\source\repos\BRE\OrderProcessing\OrderProcessing\obj\Debug\netcoreapp3.1\OrderProcessing.genruntimeconfig.cache
