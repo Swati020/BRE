@@ -7,7 +7,8 @@ namespace OrderProcessing.Rules
     {
         public bool ProcessingBizRules(Order order)
         {
-            throw new NotImplementedException();
+            bool isSuccess = order.EmailRequired() && order.SendEmail();
+            return isSuccess;
         }
     }
 }

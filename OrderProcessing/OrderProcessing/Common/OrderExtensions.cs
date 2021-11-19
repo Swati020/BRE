@@ -18,6 +18,18 @@
         {
             return order.ProductDetail.Catagories == ProductCatagories.UpgradedMemberShip;
         }
+        public static bool EmailRequired(this Order order)
+        {
+            if (order.IsMember() || order.IsUpgraded())
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
         /// <summary>
         /// GenratePaymentSlip
         /// </summary>
@@ -38,6 +50,16 @@
                 result = true;
             }
             return result;
+        }
+        /// <summary>
+        /// Send Email using 
+        /// </summary>
+        /// <param name="order"></param>
+        /// <returns></returns>
+        public static bool SendEmail(this Order order)
+        {
+            // Implement Code to send Email
+            return true;
         }
     }
 }
