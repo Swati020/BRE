@@ -12,7 +12,15 @@ namespace OrderProcessing.Tests
         [TestMethod()]
         public void MainTest()
         {
-            Assert.Fail();
+            try
+            {
+                Program program= new Program();
+                Assert.IsTrue(true);
+            }
+            catch
+            {
+                Assert.IsTrue(false);
+            }
         }
     }
 }
