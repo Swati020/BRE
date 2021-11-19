@@ -8,7 +8,13 @@ namespace OrderProcessing.Rules
     {
         public bool ProcessingBizRules(Order order)
         {
-            throw new NotImplementedException();
+            bool result = false;
+            if (order.IsUpgraded())
+            {
+                order.CustomerDetail.Upgraded = true;
+                result = true;
+            }
+            return result;
         }
     }
 }

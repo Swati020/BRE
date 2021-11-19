@@ -14,6 +14,10 @@
         {
             return order.ProductDetail.Catagories == ProductCatagories.Membership;
         }
+        public static bool IsUpgraded(this Order order)
+        {
+            return order.ProductDetail.Catagories == ProductCatagories.UpgradedMemberShip;
+        }
         /// <summary>
         /// GenratePaymentSlip
         /// </summary>
