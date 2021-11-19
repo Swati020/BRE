@@ -30,6 +30,11 @@
             }
 
         }
+        public static bool IsLearningSkiVideo(this Order order)
+        {
+            return order.ProductDetail.Catagories == ProductCatagories.SkiLearningvideos;
+        }
+        #region Processing Methods
         /// <summary>
         /// GenratePaymentSlip
         /// </summary>
@@ -61,5 +66,6 @@
             // Implement Code to send Email
             return true;
         }
+        #endregion
     }
 }

@@ -8,7 +8,8 @@ namespace OrderProcessing.Rules
     {
         public bool ProcessingBizRules(Order order)
         {
-            throw new NotImplementedException();
+            var IsSuccess= order.IsLearningSkiVideo() && order.GenratePaymentSlip();
+            return IsSuccess;
         }
     }
 }
