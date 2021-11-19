@@ -1,8 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OrderProcessing;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace OrderProcessing.Tests
 {
@@ -14,7 +10,7 @@ namespace OrderProcessing.Tests
         {
             try
             {
-                Program program= new Program();
+                Program program = new Program();
                 Assert.IsTrue(true);
             }
             catch

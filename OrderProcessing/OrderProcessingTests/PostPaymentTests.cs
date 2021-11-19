@@ -1,6 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OrderProcessing.Common;
-using System.Collections.Generic;
 
 namespace OrderProcessing.Tests
 {

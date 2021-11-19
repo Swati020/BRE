@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace OrderProcessing.Common
+﻿namespace OrderProcessing.Common
 {
     public class Order
     {

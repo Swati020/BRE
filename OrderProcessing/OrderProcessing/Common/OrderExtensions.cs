@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace OrderProcessing.Common
+﻿namespace OrderProcessing.Common
 {
     public static class OrderExtensions
     {
@@ -20,7 +16,7 @@ namespace OrderProcessing.Common
         {
             bool result;
             if (isDuplicate)
-            { 
+            {
                 //TODO Implement Code to genrate Payment Slip in form of PDF with Duplicate watermark for royality department.
                 result = true;
             }
