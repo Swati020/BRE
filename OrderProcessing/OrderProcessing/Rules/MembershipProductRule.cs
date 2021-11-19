@@ -8,7 +8,13 @@ namespace OrderProcessing.Rules
     {
         public bool ProcessingBizRules(Order order)
         {
-            throw new NotImplementedException();
+            bool result = false;
+            if (order.IsMember())
+            {
+                order.CustomerDetail.Active = true;
+                result = true;
+            }
+            return result;
         }
     }
 }

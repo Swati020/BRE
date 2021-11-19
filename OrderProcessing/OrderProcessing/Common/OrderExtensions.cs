@@ -10,6 +10,10 @@
         {
             return order.ProductDetail.Catagories == ProductCatagories.Books;
         }
+        public static bool IsMember(this Order order)
+        {
+            return order.ProductDetail.Catagories == ProductCatagories.Membership;
+        }
         /// <summary>
         /// GenratePaymentSlip
         /// </summary>
