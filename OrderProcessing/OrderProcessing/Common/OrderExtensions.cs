@@ -34,6 +34,18 @@
         {
             return order.ProductDetail.Catagories == ProductCatagories.SkiLearningvideos;
         }
+        public static bool IsCommisionRequired(this Order order)
+        {
+            if (order.IsPhysical() || order.IsBook())
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         #region Processing Methods
         /// <summary>
         /// GenratePaymentSlip
