@@ -5,6 +5,9 @@ using System.Collections.Generic;
 
 namespace OrderProcessing
 {
+    /// <summary>
+    /// PostPayment is to use all finalized active business rules
+    /// </summary>
     public class PostPayment : IPostPayment
     {
         List<IPostPaymentRule> _rules = new List<IPostPaymentRule>();

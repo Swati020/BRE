@@ -4,6 +4,9 @@ using System.Collections.Generic;
 
 namespace OrderProcessing
 {
+    /// <summary>
+    /// Console Program to see execution status
+    /// </summary>
     class Program
     {
         static void Main(string[] args)

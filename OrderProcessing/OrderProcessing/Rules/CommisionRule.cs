@@ -2,6 +2,9 @@
 using OrderProcessing.Interfaces;
 namespace OrderProcessing.Rules
 {
+    /// <summary>
+    /// CommisionRule class is use to check state of valid agent is valid to get comission the basis of category then to process the payment.
+    /// </summary>
     public class CommisionRule : IPostPaymentRule
     {
         readonly double StandardCommisionPercent = 2.5;// Assumed value

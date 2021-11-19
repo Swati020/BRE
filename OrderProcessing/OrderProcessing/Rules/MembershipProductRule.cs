@@ -3,6 +3,9 @@ using OrderProcessing.Interfaces;
 
 namespace OrderProcessing.Rules
 {
+    /// <summary>
+    /// MembershipProductRule to Activate Membership of customer.
+    /// </summary>
     public class MembershipProductRule : IPostPaymentRule
     {
         public bool ProcessingBizRules(Order order)
