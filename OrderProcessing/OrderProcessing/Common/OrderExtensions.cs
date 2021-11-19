@@ -6,6 +6,10 @@
         {
             return order.ProductDetail.Catagories == ProductCatagories.Physical;
         }
+        public static bool IsBook(this Order order)
+        {
+            return order.ProductDetail.Catagories == ProductCatagories.Books;
+        }
         /// <summary>
         /// GenratePaymentSlip
         /// </summary>

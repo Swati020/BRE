@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OrderProcessing.Common;
+using System.Collections.Generic;
 
 namespace OrderProcessing.Tests
 {
@@ -9,16 +10,26 @@ namespace OrderProcessing.Tests
         [TestMethod()]
         public void PostPaymentProcessingTest()
         {
-            Order order = new Order()
+            List<Order> processedOrderList = new List<Order>();
+            Order order1 = new Order()
             {
                 CustomerDetail = new Customer { EmailId = "abc@gmail.com", Name = "TestName" },
                 ProductDetail = new Product { Catagories = ProductCatagories.Physical, Quantity = 2, UnitPrice = 50 },
                 AgentDetail = new Agent { AgentId = 1 }
             };
-
+            Order order2 = new Order()
+            {
+                CustomerDetail = new Customer { EmailId = "abc@gmail.com", Name = "TestName" },
+                ProductDetail = new Product { Catagories = ProductCatagories.Books, Quantity = 2, UnitPrice = 50 },
+                AgentDetail = new Agent { AgentId = 1 }
+            };
+            processedOrderList.Add(order1);
+            processedOrderList.Add(order1);
             PostPayment postPayment = new PostPayment();
-            Assert.IsTrue(postPayment.PostPaymentProcessing(order));
-
+            foreach (var order in processedOrderList)
+            {
+                Assert.IsTrue(postPayment.PostPaymentProcessing(order));
+            }
         }
         [TestMethod()]
         public void PostPaymentProcessinNullReferenceExceptionTest()

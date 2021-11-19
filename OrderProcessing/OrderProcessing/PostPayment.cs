@@ -11,10 +11,19 @@ namespace OrderProcessing
         public PostPayment()
         {
             _rules.Add(new PhysicalProductRule());
+            _rules.Add(new BookProductRule());
+
         }
         public bool PostPaymentProcessing(Order order)
         {
-            return _rules[0].ProcessingBizRules(order);
+            bool isProcessCompleted = false;
+            foreach (var rule in _rules)
+            {
+                var result = rule.ProcessingBizRules(order);
+                if (result)
+                    isProcessCompleted = result;
+            }
+            return isProcessCompleted;
         }
     }
 }
