@@ -14,6 +14,7 @@ namespace OrderProcessing
             _rules.Add(new BookProductRule());
             _rules.Add(new MembershipProductRule());
             _rules.Add(new UpgradeProductRule());      
+            _rules.Add(new EmailRequiredRule());      
 
         }
         public bool PostPaymentProcessing(Order order)
